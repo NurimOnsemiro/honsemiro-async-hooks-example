@@ -1,0 +1,29 @@
+{
+    "name": "pnpm",
+    "version": "1.0.0",
+    "description": "Node.js의 async_hooks를 이용한 초간단 웹서버",
+    "main": "index.js",
+    "scripts": {
+        "start": "ts-node ./src/app.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NurimOnsemiro/honsemiro-async-hooks-example.git"
+    },
+    "keywords": [
+        "async_hooks"
+    ],
+    "author": "Honsemiro <hgs33hgs@gmail.com> (https://blog.naver.com/remocon33)",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/NurimOnsemiro/honsemiro-async-hooks-example/issues"
+    },
+    "homepage": "https://github.com/NurimOnsemiro/honsemiro-async-hooks-example#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.19",
+        "prettier": "^2.7.1"
+    },
+    "dependencies": {
+        "hyper-express": "^6.4.0"
+    }
+}
