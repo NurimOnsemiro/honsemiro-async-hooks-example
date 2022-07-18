@@ -20,6 +20,7 @@
     },
     "homepage": "https://github.com/NurimOnsemiro/honsemiro-async-hooks-example#readme",
     "devDependencies": {
+        "@types/node": "^18.0.6",
         "nodemon": "^2.0.19",
         "prettier": "^2.7.1"
     },
