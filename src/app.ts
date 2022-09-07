@@ -10,6 +10,7 @@ function logWithId(msg: unknown) {
 }
 
 async function main() {
+    let reqCnt = 0;
     console.log('Start server');
     try {
         const PORT: number = config.server.port;
@@ -20,11 +21,12 @@ async function main() {
 
         webServer.post('/nxcommand/commands/:nxcmd', async (req, res) => {
             asyncLocalStorage.run(req.header('x-request-id') ?? Date.now(), async () => {
+                reqCnt++;
                 const nxcmd = req.params.nxcmd;
-                logWithId(nxcmd);
+                logWithId(`${reqCnt}/${nxcmd}`);
                 const reqBody = await req.json();
                 logWithId(reqBody);
-                res.send(reqBody);
+                res.send('OK');
             });
         });
         await webServer.listen(PORT);
